@@ -134,7 +134,7 @@ height: 4px;
 
 position: absolute;
 left: 0;
-bottom: 0;
+bottom: -2px;
 background: #2196F3;
 border-radius: 2px;
 }
@@ -148,7 +148,7 @@ height: 4px;
 
 position: absolute;
 left: 0;
-bottom: 0;
+bottom: -2px;
 background: #2196F3;
 border-radius: 2px;
 }
@@ -248,7 +248,7 @@ color: var(--color-text-btn);
    font-style: normal;
    font-weight: 700;
    font-size: 16px;
-   line-height: 1.1;
+   line-height: 1.8;
    letter-spacing: 0.06em;
    color: #FFFFFF;
    background-color: var(--background-btn-hover);
@@ -270,6 +270,10 @@ color: var(--color-text-btn);
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.2);
+
+   transition-property: opacity;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden{
    opacity: 0;
@@ -409,6 +413,10 @@ bottom: 0;
 height: 70px;
 
 background: #2f303acc;
+
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .item-box-txt{
@@ -416,10 +424,8 @@ background: #2f303acc;
    font-weight: 700;
    font-size: 14px;
    line-height: 1.1;
-   text-align: center;
    letter-spacing: 0.03em;
    text-transform: uppercase;
-   margin-top: 27px;
    color: #FFFFFF;
 }
 
@@ -572,7 +578,7 @@ margin-right: 30px;
    fill: #afb1b8;
    color: #afb1b8;
 
-   transition-property: color border fill;
+   transition-property: color, border, fill;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -720,7 +726,7 @@ letter-spacing: 0.03em;
 
    border-color: var(--background-btn);
 
-   transition-property: background-color color box-shadow;
+   transition-property: background-color, color, box-shadow;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
